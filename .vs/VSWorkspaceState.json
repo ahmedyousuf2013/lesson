@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\Notes.txt",
+  "SelectedNode": "\\src\\components\\Button.vue",
   "PreviewInSolutionExplorer": false
 }

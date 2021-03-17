@@ -18,11 +18,24 @@
     <!-- <button v-on:click="deleteNinija">Delete ninija</button> -->
 
     <!-- <plog-post title="New Game"></plog-post> -->
-    <plog-post
+    <!-- <plog-post
       v-bind:title="user.firstName + '  And last Name' + user.lastName"
       v-bind:like="8"
       v-bind:author="post"
-    ></plog-post>
+    ></plog-post> -->
+
+
+     <!-- simplest prop - pass a string -->
+    <Child title="This is my title"></Child>
+
+    <!-- Pass an object, defined inline -->
+    <Child :parentData="{msg: 'xxx'}"></Child>
+
+    <!-- Pass an object, defined in the `data()` method -->
+    <Child :stringProp="myData"></Child>
+
+    <!-- Pass a string variable, defined in `data()`. Note colon. -->
+    <Child :stringProp="stringMessage"></Child>
   </div>
 </template>
 
@@ -35,9 +48,11 @@ import plan from "./components/plan.vue";
 import PlanPiker from "./components/PlanPiker";
 import PlogPost from "./components/PlogPost.vue";
 
+import  Child from "./components/Child";
+
 export default {
   name: "app",
-  components: { Counter, ButtonCounter, plan, PlanPiker, PlogPost },
+  components: { Counter, ButtonCounter, plan, PlanPiker, PlogPost ,Child },
   // props:{
   //   ninjas:{
   //     type:Array,
@@ -47,6 +62,7 @@ export default {
   data() {
     return {
       message: "Welcome to Your Vue.js App",
+      stringMessage:"test String message",
       user: {
         firstName: "Ahmed",
         lastName: "Mohamed",
@@ -65,6 +81,7 @@ export default {
         id: 1,
         title: "My Journey with Vue",
       },
+      myData:"My Data",
       boxes: [{ text: "sss" }],
     };
   },
