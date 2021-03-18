@@ -3,3 +3,5 @@ vue init webpack-simple hello-vue
 npm i -g @vue/cli-init
 npm i
 npm run dev
+vue create .
+npm install vuex axios
